@@ -21,9 +21,9 @@ const copy = {
       "Tell me about the three regions of Malawi.",
       "What are some important sectors of Malawi's economy?"
     ],
-    ask: "Ask Mthandizi anything about Malawi...",
-    disclaimer: "Mthandizi can make mistakes. Verify important information with trusted sources.",
-    thinking: "Mthandizi is thinking...", you: "You", copy: "Copy", copied: "Copied",
+    ask: "Ask NyasaExploler anything about Malawi...",
+    disclaimer: "NyasaExploler can make mistakes. Verify important information with trusted sources.",
+    thinking: "NyasaExploler is thinking...", you: "You", copy: "Copy", copied: "Copied",
     error: "Sorry, I couldn't complete that request."
   },
   ny: {
@@ -39,9 +39,9 @@ const copy = {
       "Tiuzeni za zigawo zitatu za Malaŵi.",
       "Kodi ndi magawo ati ofunika pa chuma cha Malaŵi?"
     ],
-    ask: "Funsani Mthandizi chilichonse chokhudza Malaŵi...",
-    disclaimer: "Mthandizi akhoza kulakwitsa. Tsimikizirani mfundo zofunika ku magwero odalirika.",
-    thinking: "Mthandizi akuganiza...", you: "Inu", copy: "Koperani", copied: "Zakoperedwa",
+    ask: "Funsani NyasaExploler chilichonse chokhudza Malaŵi...",
+    disclaimer: "NyasaExploler akhoza kulakwitsa. Tsimikizirani mfundo zofunika ku magwero odalirika.",
+    thinking: "NyasaExploler akuganiza...", you: "Inu", copy: "Koperani", copied: "Zakoperedwa",
     error: "Pepani, sindinathe kumaliza pempholi."
   }
 };
@@ -172,7 +172,7 @@ export default function App() {
       <aside className={`sidebar ${sidebarOpen ? "sidebar-open" : ""}`}>
         <div className="brand">
           <div className="brand-mark"><Sparkles size={21} /></div>
-          <div className="brand-copy"><h2>Mthandizi</h2><span>AI for Malawi</span></div>
+          <div className="brand-copy"><h2>NyasaExploler</h2><span>AI for Malawi</span></div>
           <button className="close-sidebar" onClick={() => setSidebarOpen(false)} aria-label="Close menu"><X size={19} /></button>
         </div>
 
@@ -203,7 +203,7 @@ export default function App() {
         <header className="topbar">
           <div className="topbar-left">
             <button className="menu-button" onClick={() => setSidebarOpen(true)} aria-label="Open menu"><Menu size={21} /></button>
-            <div className="mobile-brand"><Sparkles size={19} /> Mthandizi</div>
+            <div className="mobile-brand"><Sparkles size={19} /> NyasaExploler</div>
             <div className="page-context"><span className="context-dot" /> {t.country} · AI assistant</div>
           </div>
           <div className="topbar-right">
@@ -241,7 +241,7 @@ export default function App() {
                 <div key={index} className={`message-row ${message.role}`}>
                   {message.role === "assistant" && <div className="message-avatar"><Sparkles size={17} /></div>}
                   <div className="message-content">
-                    <span className="message-author">{message.role === "user" ? t.you : "Mthandizi"}</span>
+                    <span className="message-author">{message.role === "user" ? t.you : "NyasaExploler"}</span>
                     <div className={`message-text ${message.role === "user" ? "user-bubble" : "assistant-prose"}`}>
                       {message.role === "assistant" ? (
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.content}</ReactMarkdown>
